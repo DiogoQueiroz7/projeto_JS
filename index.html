@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Histórias Interativas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crie Sua Própria História!</h1>
+        <p>Preencha os campos abaixo e veja a mágica acontecer.</p>
+        
+        <div class="entradas">
+            <input type="text" id="nomePersonagem" placeholder="Nome de um personagem">
+            <input type="text" id="lugar" placeholder="Um lugar (ex: Marte, porão)">
+            <input type="text" id="verbo" placeholder="Um verbo (ex: correr, pular)">
+            <input type="text" id="adjetivo" placeholder="Um adjetivo (ex: verde, feliz)">
+            <input type="number" id="numero" placeholder="Um número qualquer">
+            
+            <select id="escolha">
+                <option value="tesouro">Encontrar um tesouro</option>
+                <option value="monstro">Enfrentar um monstro</option>
+            </select>
+        </div>
+
+        <button id="btnGerar">Gerar História!</button>
+
+        <div id="historia-resultado" class="hidden">
+            <h2>Sua História:</h2>
+            <p id="historiaTexto"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
