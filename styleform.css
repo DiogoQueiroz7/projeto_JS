@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./Projeto-HTML/imagens/from4.jpg);
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-top: 2%;
+    justify-content: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.conteudo{
+    margin-left: 35%;
+    margin-top: 2%;
+}
+
+#titulo{
+    font-family: sans-serif;
+    color: rgb(6, 8, 8);
+    margin-left: 10%;
+
+}
+
+#subtitulo{
+    font-family: sans-serif;
+    color: #000000;
+    margin-left: 10%;
+}
+.grupo{
+    margin-left: 2%;
+}
+fieldset{
+    border: 0;
+}
+
+input, select, textarea, button{
+    border-radius: 5px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label{
+    margin-bottom: 3px;
+    color: #ffffff;
+    display: block;
+}
+
+fieldset.grupo .campo{
+    float: left;
+    margin-right: 16px; 
+}
+.campo input .campo textarea{
+    padding: 3px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 2px gray;
+    display:block;
+}
+
+.campo select option{
+    padding-right: 16px;
+}
+
+.botao{
+    font-size: 19px;
+    background: midnightblue;
+    border: 0;
+    color: #ecf0f1;
+    padding: 3px 10px;
+    box-shadow: 2px 2px 2px gray;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+}
+
+.botao:hover{
+    background: #2c3e50;
+    box-shadow: inset 2px 2px 2px blue;
+}
+
+#check{
+    display: inline-block;
+    color: aliceblue;
+}
+footer{
+    background-color: #1a1a1a;
+    color: blanchedalmond;
+    padding: 40px;
+    text-align: center;
+    height: 100%;
+}
+
+
+@media (max-width: 480px){
+    body {
+        padding: auto;
+    }
+    .campo label {
+        font-size:14px ;
+    }
+    .botao{
+        font-size: 14px;
+        padding: auto;
+    }
+    h1#titulo{
+        font-size: 24px;
+    }
+    h1#subtitulo{
+        font-size: 20px;
+    }
+}
