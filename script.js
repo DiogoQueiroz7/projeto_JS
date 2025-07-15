@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-
     const formulario = document.getElementById('formulario_avistamento');
     const campoNome = document.getElementById('campo_nome_observador');
     const campoEmail = document.getElementById('campo_email');
@@ -10,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const campoDescricao = document.getElementById('campo_descricao');
     const areaRelatorios = document.getElementById('area_relatorios');
     const botaoLimparTudo = document.getElementById('botao_limpar_tudo');
-
+    
     const erroNome = document.getElementById('erro_nome_observador');
     const erroData = document.getElementById('erro_data');
     const erroHora = document.getElementById('erro_hora');
@@ -20,17 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function validarFormulario() {
         let eValido = true;
-
+        
         erroNome.style.display = 'none'; campoNome.classList.remove('input-erro');
         erroData.style.display = 'none'; campoData.classList.remove('input-erro');
         erroHora.style.display = 'none'; campoHora.classList.remove('input-erro');
         erroLocal.style.display = 'none'; campoLocal.classList.remove('input-erro');
         erroFormato.style.display = 'none'; campoFormato.classList.remove('input-erro');
         erroDescricao.style.display = 'none'; campoDescricao.classList.remove('input-erro');
-
-        if(erroEmail.value === ''){
-            erroEmail.textContent = 'O Email é obrigatório.'; erroEmail.style.display = 'block'; campoEmail.classList.add('input-erro'), eValido = false;
-        }
+        
         if (campoNome.value.trim() === '') {
             erroNome.textContent = 'O nome é obrigatório.'; erroNome.style.display = 'block'; campoNome.classList.add('input-erro'); eValido = false;
         }
@@ -55,39 +50,43 @@ document.addEventListener('DOMContentLoaded', function() {
     function limparRelatorios() {
         const todosOsRelatorios = document.querySelectorAll('#area_relatorios .relatorio-card');
         for (const relatorio of todosOsRelatorios) {
-            relatorio.remove(); 
+            relatorio.remove();
         }
     }
-
 
     formulario.addEventListener('submit', function(evento) {
         evento.preventDefault();
 
         if (validarFormulario()) {
-            
+
             const novoRelatorio = document.createElement('div');
             novoRelatorio.className = 'relatorio-card';
 
-            const dataObjeto = new Date(campoData.value);
-            const dataFormatada = new Intl.DateTimeFormat('pt-BR', { timeZone: 'UTC' }).format(dataObjeto);
+            const titulo = document.createElement('h4');
+            titulo.textContent = `Relatório de ${campoNome.value}`;
+
+            const dataHora = document.createElement('p');
+            dataHora.innerHTML = `<strong>Data e Hora:</strong> ${campoData.value} às ${campoHora.value}`;
+
+            const local = document.createElement('p');
+            local.innerHTML = `<strong>Local:</strong> ${campoLocal.value}`;
+
+            const formato = document.createElement('p');
+            formato.innerHTML = `<strong>Formato do Objeto:</strong> ${campoFormato.value}`;
+
+            const descricao = document.createElement('blockquote');
+            descricao.textContent = `"${campoDescricao.value}"`;
             
-            novoRelatorio.innerHTML = `
-                <h4>Relatório de ${campoNome.value}</h4>
-                <p><strong>Data e Hora:</strong> ${dataFormatada} às ${campoHora.value}</p>
-                <p><strong>Local:</strong> ${campoLocal.value}</p>
-                <p><strong>Formato do Objeto:</strong> ${campoFormato.value}</p>
-                <blockquote>"${campoDescricao.value}"</blockquote>
-            `;
+            novoRelatorio.appendChild(titulo);
+            novoRelatorio.appendChild(dataHora);
+            novoRelatorio.appendChild(local);
+            novoRelatorio.appendChild(formato);
+            novoRelatorio.appendChild(descricao);
             
             areaRelatorios.appendChild(novoRelatorio);
-
-            setTimeout(() => {
-                novoRelatorio.classList.add('visivel');
-            }, 10);
 
             formulario.reset();
         }
     });
 
     botaoLimparTudo.addEventListener('click', limparRelatorios);
-});
