@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSO - Relatório de Avistamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="area1">
+        <section class="area1--conteudo">
+            <div class="barra"> </div>
+            <h2>A IMENSIDÃO DO UNIVERSO</h2>
+            <span>Platão: "Todo o universo é cheio de beleza."</span>
+            <br><br><br>
+            <section class="area1--texto"> "Em meio à vastidão cósmica, o universo revela a grandiosidade e a beleza infinita de suas estrelas, galáxias e mistérios, lembrando-nos da nossa pequena, mas especial, presença neste majestoso balé cósmico."</section>
+            <a href="https://olhardigital.com.br/2023/09/18/ciencia-e-espaco/universo-o-que-e-como-ele-se-originou-e-onde-estamos-nele/">
+                <button>Saiba Mais</button>
+            </a>
+        </section>
+        <section class="area1--img1"></section>
+        <section class="area1--img2"></section>
+    </section>
+    
+    <section class="area2">
+        <section class="area2--conteudo">
+            <div class="barra"> </div>
+            <h2>A BELEZA DA TERRA</h2>
+            <span>Toda a arte é uma imitação da natureza - Sêneca</span>
+            <br><br><br>
+            <p class="area2--texto"> "A cada amanhecer e entardecer, a Terra revela segredos insondáveis escondidos em suas florestas antigas, montanhas misteriosas e oceanos profundos, como se guardasse uma verdade primordial que nós, meros mortais, ainda não conseguimos desvendar."</p>
+            <a href="https://casavogue.globo.com/LazerCultura/Viagem/noticia/2020/04/dia-da-terra-10-paisagens-para-contemplar-beleza-natural-do-planeta.html" target="_blank">
+                <button>Saiba Mais</button>
+            </a>
+        </section>
+        <section class="area2--img1"></section>
+        <section class="area2--img2"></section>
+    </section>
+    
+    <section class="area3">
+        <section class="area3--conteudo">
+            <h2>A Terra é uma joia cósmica.</h2>
+            <p class="area3--texto"> A Terra, nossa casa, flutua majestosamente no vasto oceano cósmico, um planeta pulsante de vida e biodiversidade. Neste pequeno ponto azul, encontramos a harmonia entre a complexidade do universo e a simplicidade da existência, lembrando-nos da beleza incomparável e da fragilidade do lugar que chamamos de lar.</p>
+        </section>
+        <section class="area3--img"></section>
+    </section>
+
+    <section class="area4">
+    <section class="area4--conteudo">
+        <div class="barra"></div>
+        <h2>Visitantes Inesperados?</h2>
+        <span>... e com tanta beleza, seria surpresa se o universo não nos visitasse de volta?</span>
+        <p class="area4--texto">
+            Às vezes, luzes dançam onde não deveriam, e o silêncio da noite é quebrado por visões que desafiam a nossa compreensão. Se você já testemunhou o inexplicável, este é o seu espaço para documentar.
+        </p>
+    </section>
+
+    <section class="area4--img">
+        </section>
+</section>
+    
+    <section class="secao-formulario">
+        <div class="container-principal">
+            <header>
+                <h1>Relatório de Avistamento</h1>
+                <p>Viu algo inexplicável no céu? Documente seu avistamento para nossos arquivos cósmicos.</p>
+            </header>
+
+            <form id="formulario_avistamento">
+                <div class="grupo-formulario">
+                    <label for="campo_nome_observador">Seu Nome:</label>
+                    <input type="text" id="campo_nome_observador" placeholder="Seu nome completo">
+                    <span class="mensagem-erro" id="erro_nome_observador"></span>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="campo_email">Seu Email (opcional):</label>
+                    <input type="email" id="campo_email" placeholder="email@exemplo.com">
+                </div>
+                <div class="grupo-formulario-duplo">
+                    <div class="grupo-formulario">
+                        <label for="campo_data">Data do Avistamento:</label>
+                        <input type="date" id="campo_data">
+                        <span class="mensagem-erro" id="erro_data"></span>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="campo_hora">Hora Aproximada:</label>
+                        <input type="time" id="campo_hora">
+                        <span class="mensagem-erro" id="erro_hora"></span>
+                    </div>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="campo_local">Localização (Cidade/Estado):</label>
+                    <input type="text" id="campo_local" placeholder="Ex: São Paulo, SP">
+                    <span class="mensagem-erro" id="erro_local"></span>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="campo_formato_objeto">Formato do Objeto:</label>
+                    <select id="campo_formato_objeto">
+                        <option value="">-- Selecione um formato --</option>
+                        <option value="Disco">Disco</option>
+                        <option value="Esfera">Esfera</option>
+                        <option value="Triângulo">Triângulo</option>
+                        <option value="Luzes em Formação">Luzes em Formação</option>
+                        <option value="Cilíndrico">Cilíndrico / "Charuto"</option>
+                        <option value="Irregular">Irregular / disforme</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                    <span class="mensagem-erro" id="erro_formato_objeto"></span>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="campo_descricao">Descrição do Avistamento:</label>
+                    <textarea id="campo_descricao" rows="5" placeholder="Descreva o que você viu, o comportamento do objeto, cores, sons, etc."></textarea>
+                    <span class="mensagem-erro" id="erro_descricao"></span>
+                </div>
+                <button type="submit" class="botao-principal">Enviar Relatório</button>
+            </form>
+        </div>
+        <div class="container-certificados">
+            <h2>Relatórios Arquivados</h2>
+            <div id="area_relatorios"></div>
+            <button id="botao_limpar_tudo" class="botao-secundario">Limpar Arquivos</button>
+        </div>
+    </section>
+
+    <footer>
+        <h1>Criado e Desenvolvido por Diogo Queiroz</h1>
+        <h2>Visitantes Do Universo</h2>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
